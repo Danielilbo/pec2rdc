@@ -1,0 +1,343 @@
+@prefix : <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#> .
+
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos> rdf:type owl:Ontology ;
+                                                                      rdfs:comment """1. Descripción
+
+Esta ontología modela las respuestas de encuestas de satisfacción de clientes de aerolíneas, enfocándose en Qatar Airways y Ryanair.
+
+2. Propósito y Caso de uso
+
+Propósito: Facilitar el análisis y comparación de la satisfacción del cliente entre diferentes aerolíneas. 
+Caso de Uso: Analizar las tendencias de satisfacción en servicios a bordo entre Qatar Airways y Ryanair.
+
+3. Requerimientos
+
+- ¿Cuál es el promedio de satisfacción general para Qatar Airways?
+- ¿Cómo se comparan las tasas de satisfacción del servicio a bordo entre Qatar Airways y Ryanair?
+- ¿Qué factores están más correlacionados con la insatisfacción del cliente en Ryanair?
+- ¿Hay diferencias estacionales en la satisfacción del cliente en ambas aerolíneas?
+
+4, Especificaciones
+
+Los datos provienen de encuestas de satisfacción disponibles en Kaggle para Qatar Airways y Ryanair, presentadas en formato CSV.""" ;
+                                                                      rdfs:label "Ontología de Encuestas de Satisfacción de Vuelos" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#fliesFrom
+:fliesFrom rdf:type owl:ObjectProperty ;
+           rdfs:domain :Flight ;
+           rdfs:range :Airport .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasFlown
+:hasFlown rdf:type owl:ObjectProperty ;
+          rdfs:domain :Customer ;
+          rdfs:range :Flight .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasReviewed
+:hasReviewed rdf:type owl:ObjectProperty ;
+             rdfs:domain :Customer ;
+             rdfs:range :Review .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#operatesFlight
+:operatesFlight rdf:type owl:ObjectProperty ;
+                rdfs:domain :Airline ;
+                rdfs:range :Flight .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#aircraftType
+:aircraftType rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Flight ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#customerCountry
+:customerCountry rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Customer ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#flightDate
+:flightDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Flight ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewDate
+:reviewDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Review ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewRating
+:reviewRating rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Review ;
+              rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#seatType
+:seatType rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Flight ;
+          rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Aircraft
+:Aircraft rdf:type owl:Class ;
+          rdfs:comment "Refers to any kind of airplane used in commercial flights." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airline
+:Airline rdf:type owl:Class ;
+         rdfs:comment "An organization providing air transport services for traveling passengers and freight." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airport
+:Airport rdf:type owl:Class ;
+         rdfs:comment "Represents an airport, which is a location where flights take off and land." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#AverageRating
+:AverageRating rdf:type owl:Class ;
+               rdfs:subClassOf :Rating ;
+               rdfs:comment "Indicates a moderate level of satisfaction in customer reviews." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#BusinessTraveller
+:BusinessTraveller rdf:type owl:Class ;
+                   rdfs:subClassOf :Review ;
+                   rdfs:comment "A customer traveling for business purposes." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CabinStaffService
+:CabinStaffService rdf:type owl:Class ;
+                   rdfs:subClassOf :ServiceAspect ;
+                   rdfs:comment "Refers to the quality of service provided by the airline's cabin staff." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CoupleLeisure
+:CoupleLeisure rdf:type owl:Class ;
+               rdfs:subClassOf :Review ;
+               rdfs:comment "Leisure travelers flying as a couple." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer
+:Customer rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasReviewed ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Customer
+                              ] ;
+          rdfs:comment "An individual who purchases air travel service from airlines." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRating
+:ExcellentRating rdf:type owl:Class ;
+                 rdfs:subClassOf :Rating ;
+                 rdfs:comment "Indicates an exceptional level of satisfaction in customer reviews." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FamilyLeisure
+:FamilyLeisure rdf:type owl:Class ;
+               rdfs:subClassOf :Review ;
+               rdfs:comment "Families traveling together for leisure purposes." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight
+:Flight rdf:type owl:Class ;
+        rdfs:comment "A journey made by an airplane from one airport to another." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FoodBeverages
+:FoodBeverages rdf:type owl:Class ;
+               rdfs:subClassOf :ServiceAspect ;
+               rdfs:comment "Refers to the quality and variety of food and drinks offered during the flight." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GoodRating
+:GoodRating rdf:type owl:Class ;
+            rdfs:subClassOf :Rating ;
+            rdfs:comment "Indicates a good level of satisfaction in customer reviews." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroundService
+:GroundService rdf:type owl:Class ;
+               rdfs:subClassOf :ServiceAspect ;
+               rdfs:comment "Refers to the services provided on the ground, such as check-in and baggage handling." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroupLeisure
+:GroupLeisure rdf:type owl:Class ;
+              rdfs:subClassOf :Review ;
+              rdfs:comment "Groups of people traveling together for leisure purposes." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#InflightEntertainment
+:InflightEntertainment rdf:type owl:Class ;
+                       rdfs:subClassOf :ServiceAspect ;
+                       rdfs:comment "Entertainment options available to passengers during the flight." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#PoorRating
+:PoorRating rdf:type owl:Class ;
+            rdfs:subClassOf :Rating ;
+            rdfs:comment "Indicates a low level of satisfaction in customer reviews." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#QatarAirways
+:QatarAirways rdf:type owl:Class ;
+              rdfs:subClassOf :Aircraft ;
+              owl:disjointWith :Ryanair ;
+              rdfs:comment "The state-owned flag carrier of Qatar, providing international flights." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating
+:Rating rdf:type owl:Class ;
+        rdfs:comment "Represents the ratings given to airlines based on customer reviews." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review
+:Review rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :reviewRating ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:integer
+                            ] ;
+        rdfs:comment "A customer's evaluation or assessment of their flight experience." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Ryanair
+:Ryanair rdf:type owl:Class ;
+         rdfs:subClassOf :Aircraft ;
+         rdfs:comment "An Irish low-cost airline headquartered in Dublin, known for its budget travel services." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SeatComfort
+:SeatComfort rdf:type owl:Class ;
+             rdfs:subClassOf :ServiceAspect ;
+             rdfs:comment "Refers to how comfortable the seating arrangements are on the flight." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect
+:ServiceAspect rdf:type owl:Class ;
+               rdfs:comment "Different aspects of airline service that are rated in reviews, such as seat comfort or food quality." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SoloLeisure
+:SoloLeisure rdf:type owl:Class ;
+             rdfs:subClassOf :Review ;
+             rdfs:comment "Individuals traveling alone for leisure purposes." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Verified
+:Verified rdf:type owl:Class ;
+          rdfs:subClassOf :Review ;
+          rdfs:comment "Indicates whether a review has been verified as authentic." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#WifiConnectivity
+:WifiConnectivity rdf:type owl:Class ;
+                  rdfs:subClassOf :ServiceAspect ;
+                  rdfs:comment "Refers to the availability and quality of WiFi connection aboard the aircraft." .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CustomerJohnDoe
+:CustomerJohnDoe rdf:type owl:NamedIndividual ,
+                          :Customer ;
+                 :customerCountry "USA" ;
+                 rdfs:comment "A frequent business traveler who uses various airlines for international travel." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#DohaAirport
+:DohaAirport rdf:type owl:NamedIndividual ,
+                      :Airport ;
+             rdfs:comment "The international airport for Doha, Qatar, serving as the primary hub for Qatar Airways." ;
+             rdfs:label "Hamad International Airport" .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRatingFiveStars
+:ExcellentRatingFiveStars rdf:type owl:NamedIndividual ,
+                                   :ExcellentRating ,
+                                   :Rating ;
+                          rdfs:label "Excellent Rating" .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FlightQR905
+:FlightQR905 rdf:type owl:NamedIndividual ,
+                      :Flight ;
+             rdfs:comment "A daily flight from Doha to London operated by Qatar Airways." .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Qatar_Airways
+:Qatar_Airways rdf:type owl:NamedIndividual ,
+                        :Airline ;
+               rdfs:comment "A major international airline based in Doha, known for its high service quality" .
+
+
+###  http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ReviewJohnDoeQR905
+:ReviewJohnDoeQR905 rdf:type owl:NamedIndividual ,
+                             :Review ;
+                    :reviewDate "2024-04-01" ;
+                    :reviewRating 5 ;
+                    rdfs:comment "John Doe's review of his flight from Doha to London on Qatar Airways." ;
+                    rdfs:label "Review of Flight QR905 by John Doe" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AverageRating
+                :ExcellentRating
+                :GoodRating
+                :PoorRating
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BusinessTraveller
+                :CoupleLeisure
+                :FamilyLeisure
+                :GroupLeisure
+                :SoloLeisure
+                :Verified
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CabinStaffService
+                :FoodBeverages
+                :GroundService
+                :InflightEntertainment
+                :SeatComfort
+                :WifiConnectivity
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,467 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasReviewed"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CabinStaffService"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FoodBeverages"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroundService"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#InflightEntertainment"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SeatComfort"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#WifiConnectivity"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewRating"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#AverageRating"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRating"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GoodRating"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#PoorRating"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#BusinessTraveller"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CoupleLeisure"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FamilyLeisure"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroupLeisure"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SoloLeisure"
+    }, {
+      "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Verified"
+    } ]
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "1. Descripción\n\nEsta ontología modela las respuestas de encuestas de satisfacción de clientes de aerolíneas, enfocándose en Qatar Airways y Ryanair.\n\n2. Propósito y Caso de uso\n\nPropósito: Facilitar el análisis y comparación de la satisfacción del cliente entre diferentes aerolíneas. \nCaso de Uso: Analizar las tendencias de satisfacción en servicios a bordo entre Qatar Airways y Ryanair.\n\n3. Requerimientos\n\n- ¿Cuál es el promedio de satisfacción general para Qatar Airways?\n- ¿Cómo se comparan las tasas de satisfacción del servicio a bordo entre Qatar Airways y Ryanair?\n- ¿Qué factores están más correlacionados con la insatisfacción del cliente en Ryanair?\n- ¿Hay diferencias estacionales en la satisfacción del cliente en ambas aerolíneas?\n\n4, Especificaciones\n\nLos datos provienen de encuestas de satisfacción disponibles en Kaggle para Qatar Airways y Ryanair, presentadas en formato CSV."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ontología de Encuestas de Satisfacción de Vuelos"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Aircraft",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to any kind of airplane used in commercial flights."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An organization providing air transport services for traveling passengers and freight."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents an airport, which is a location where flights take off and land."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#AverageRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates a moderate level of satisfaction in customer reviews."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#BusinessTraveller",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A customer traveling for business purposes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CabinStaffService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to the quality of service provided by the airline's cabin staff."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CoupleLeisure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Leisure travelers flying as a couple."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An individual who purchases air travel service from airlines."
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CustomerJohnDoe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#customerCountry" : [ {
+    "@value" : "USA"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A frequent business traveler who uses various airlines for international travel."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#DohaAirport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The international airport for Doha, Qatar, serving as the primary hub for Qatar Airways."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hamad International Airport"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates an exceptional level of satisfaction in customer reviews."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRatingFiveStars",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRating"
+  }, {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Excellent Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FamilyLeisure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Families traveling together for leisure purposes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A journey made by an airplane from one airport to another."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FlightQR905",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A daily flight from Doha to London operated by Qatar Airways."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FoodBeverages",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to the quality and variety of food and drinks offered during the flight."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GoodRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates a good level of satisfaction in customer reviews."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroundService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to the services provided on the ground, such as check-in and baggage handling."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroupLeisure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Groups of people traveling together for leisure purposes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#InflightEntertainment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Entertainment options available to passengers during the flight."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#PoorRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates a low level of satisfaction in customer reviews."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#QatarAirways",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The state-owned flag carrier of Qatar, providing international flights."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Aircraft"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Ryanair"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Qatar_Airways",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A major international airline based in Doha, known for its high service quality"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the ratings given to airlines based on customer reviews."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A customer's evaluation or assessment of their flight experience."
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ReviewJohnDoeQR905",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewDate" : [ {
+    "@value" : "2024-04-01"
+  } ],
+  "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "John Doe's review of his flight from Doha to London on Qatar Airways."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Review of Flight QR905 by John Doe"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Ryanair",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An Irish low-cost airline headquartered in Dublin, known for its budget travel services."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Aircraft"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SeatComfort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to how comfortable the seating arrangements are on the flight."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Different aspects of airline service that are rated in reviews, such as seat comfort or food quality."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SoloLeisure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Individuals traveling alone for leisure purposes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Verified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates whether a review has been verified as authentic."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#WifiConnectivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to the availability and quality of WiFi connection aboard the aircraft."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#aircraftType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#customerCountry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#fliesFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airport"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#flightDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasFlown",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasReviewed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#operatesFlight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#seatType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+} ]

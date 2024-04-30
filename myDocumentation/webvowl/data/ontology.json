@@ -1,0 +1,1104 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos" ],
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "labels" : {
+      "undefined" : "Ontología de Encuestas de Satisfacción de Vuelos"
+    },
+    "comments" : {
+      "undefined" : "1. Descripción\n\nEsta ontología modela las respuestas de encuestas de satisfacción de clientes de aerolíneas, enfocándose en Qatar Airways y Ryanair.\n\n2. Propósito y Caso de uso\n\nPropósito: Facilitar el análisis y comparación de la satisfacción del cliente entre diferentes aerolíneas. \nCaso de Uso: Analizar las tendencias de satisfacción en servicios a bordo entre Qatar Airways y Ryanair.\n\n3. Requerimientos\n\n- ¿Cuál es el promedio de satisfacción general para Qatar Airways?\n- ¿Cómo se comparan las tasas de satisfacción del servicio a bordo entre Qatar Airways y Ryanair?\n- ¿Qué factores están más correlacionados con la insatisfacción del cliente en Ryanair?\n- ¿Hay diferencias estacionales en la satisfacción del cliente en ambas aerolíneas?\n\n4, Especificaciones\n\nLos datos provienen de encuestas de satisfacción disponibles en Kaggle para Qatar Airways y Ryanair, presentadas en formato CSV."
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#QatarAirways",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QatarAirways"
+    },
+    "comment" : {
+      "undefined" : "The state-owned flag carrier of Qatar, providing international flights."
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Flight"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FlightQR905",
+      "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+      "comment" : {
+        "undefined" : "A daily flight from Doha to London operated by Qatar Airways."
+      },
+      "labels" : {
+        "IRI-based" : "FlightQR905"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A journey made by an airplane from one airport to another."
+    },
+    "id" : "5"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airline",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Airline"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Qatar_Airways",
+      "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+      "comment" : {
+        "undefined" : "A major international airline based in Doha, known for its high service quality"
+      },
+      "labels" : {
+        "IRI-based" : "Qatar_Airways"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "An organization providing air transport services for traveling passengers and freight."
+    },
+    "id" : "20"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Customer"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CustomerJohnDoe",
+      "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+      "comment" : {
+        "undefined" : "A frequent business traveler who uses various airlines for international travel."
+      },
+      "labels" : {
+        "IRI-based" : "CustomerJohnDoe"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "An individual who purchases air travel service from airlines."
+    },
+    "id" : "12"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#AverageRating",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AverageRating"
+    },
+    "comment" : {
+      "undefined" : "Indicates a moderate level of satisfaction in customer reviews."
+    },
+    "id" : "28",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Verified",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Verified"
+    },
+    "comment" : {
+      "undefined" : "Indicates whether a review has been verified as authentic."
+    },
+    "id" : "23",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SoloLeisure",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoloLeisure"
+    },
+    "comment" : {
+      "undefined" : "Individuals traveling alone for leisure purposes."
+    },
+    "id" : "22",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SeatComfort",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeatComfort"
+    },
+    "comment" : {
+      "undefined" : "Refers to how comfortable the seating arrangements are on the flight."
+    },
+    "id" : "10",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Rating"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRatingFiveStars",
+      "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+      "labels" : {
+        "IRI-based" : "ExcellentRatingFiveStars",
+        "undefined" : "Excellent Rating"
+      }
+    } ],
+    "subClasses" : [ "50", "28", "51", "52" ],
+    "comment" : {
+      "undefined" : "Represents the ratings given to airlines based on customer reviews."
+    },
+    "id" : "29"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GoodRating",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GoodRating"
+    },
+    "comment" : {
+      "undefined" : "Indicates a good level of satisfaction in customer reviews."
+    },
+    "id" : "52",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Review"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ReviewJohnDoeQR905",
+      "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+      "comment" : {
+        "undefined" : "John Doe's review of his flight from Doha to London on Qatar Airways."
+      },
+      "labels" : {
+        "IRI-based" : "ReviewJohnDoeQR905",
+        "undefined" : "Review of Flight QR905 by John Doe"
+      }
+    } ],
+    "subClasses" : [ "35", "45", "38", "23", "33", "22" ],
+    "comment" : {
+      "undefined" : "A customer's evaluation or assessment of their flight experience."
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroupLeisure",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GroupLeisure"
+    },
+    "comment" : {
+      "undefined" : "Groups of people traveling together for leisure purposes."
+    },
+    "id" : "33",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FoodBeverages",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FoodBeverages"
+    },
+    "comment" : {
+      "undefined" : "Refers to the quality and variety of food and drinks offered during the flight."
+    },
+    "id" : "7",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroundService",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GroundService"
+    },
+    "comment" : {
+      "undefined" : "Refers to the services provided on the ground, such as check-in and baggage handling."
+    },
+    "id" : "3",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "67",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRating",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExcellentRating"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRatingFiveStars",
+      "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+      "labels" : {
+        "IRI-based" : "ExcellentRatingFiveStars",
+        "undefined" : "Excellent Rating"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Indicates an exceptional level of satisfaction in customer reviews."
+    },
+    "id" : "50",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airport",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Airport"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#DohaAirport",
+      "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+      "comment" : {
+        "undefined" : "The international airport for Doha, Qatar, serving as the primary hub for Qatar Airways."
+      },
+      "labels" : {
+        "IRI-based" : "DohaAirport",
+        "undefined" : "Hamad International Airport"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Represents an airport, which is a location where flights take off and land."
+    },
+    "id" : "71"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#BusinessTraveller",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BusinessTraveller"
+    },
+    "comment" : {
+      "undefined" : "A customer traveling for business purposes."
+    },
+    "id" : "45",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Aircraft",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Aircraft"
+    },
+    "subClasses" : [ "0", "62" ],
+    "comment" : {
+      "undefined" : "Refers to any kind of airplane used in commercial flights."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ServiceAspect"
+    },
+    "subClasses" : [ "8", "4", "15", "7", "3", "10" ],
+    "comment" : {
+      "undefined" : "Different aspects of airline service that are rated in reviews, such as seat comfort or food quality."
+    },
+    "id" : "46"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#PoorRating",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PoorRating"
+    },
+    "comment" : {
+      "undefined" : "Indicates a low level of satisfaction in customer reviews."
+    },
+    "id" : "51",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CoupleLeisure",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CoupleLeisure"
+    },
+    "comment" : {
+      "undefined" : "Leisure travelers flying as a couple."
+    },
+    "id" : "38",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Ryanair",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ryanair"
+    },
+    "comment" : {
+      "undefined" : "An Irish low-cost airline headquartered in Dublin, known for its budget travel services."
+    },
+    "id" : "62",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FamilyLeisure",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FamilyLeisure"
+    },
+    "comment" : {
+      "undefined" : "Families traveling together for leisure purposes."
+    },
+    "id" : "35",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CabinStaffService",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CabinStaffService"
+    },
+    "comment" : {
+      "undefined" : "Refers to the quality of service provided by the airline's cabin staff."
+    },
+    "id" : "15",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#WifiConnectivity",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WifiConnectivity"
+    },
+    "comment" : {
+      "undefined" : "Refers to the availability and quality of WiFi connection aboard the aircraft."
+    },
+    "id" : "8",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#InflightEntertainment",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InflightEntertainment"
+    },
+    "comment" : {
+      "undefined" : "Entertainment options available to passengers during the flight."
+    },
+    "id" : "4",
+    "superClasses" : [ "46" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "6",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "9",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "16",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "17",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "18",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "19",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "21",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "24",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "25",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "34",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "36",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "37",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "39",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "40",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "41",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "47",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "48",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "66",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "68",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "69",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "74",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "88",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "89",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "90",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "91",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "92",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "93",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "94",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "95",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "96",
+    "type" : "owl:disjointWith"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "2"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "6"
+  }, {
+    "range" : "10",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasReviewed",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "hasReviewed"
+    },
+    "domain" : "12",
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "range" : "8",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "range" : "10",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "range" : "4",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
+  }, {
+    "range" : "3",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "18"
+  }, {
+    "range" : "7",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
+  }, {
+    "range" : "23",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "21"
+  }, {
+    "range" : "4",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "24"
+  }, {
+    "range" : "3",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#seatType",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "seatType"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#aircraftType",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "aircraftType"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "30"
+  }, {
+    "range" : "22",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "23",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "23",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "range" : "23",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "22",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "22",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "33",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#flightDate",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "flightDate"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "42"
+  }, {
+    "range" : "23",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "range" : "33",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "range" : "35",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "46",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "29",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "29",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "46",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "46",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "46",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "46",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "59"
+  }, {
+    "range" : "46",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  }, {
+    "range" : "1",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "range" : "62",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "range" : "8",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "8",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
+  }, {
+    "range" : "10",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#fliesFrom",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "fliesFrom"
+    },
+    "domain" : "5",
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewDate",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "reviewDate"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "72"
+  }, {
+    "range" : "8",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "10",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasFlown",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasFlown"
+    },
+    "domain" : "12",
+    "attributes" : [ "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewRating",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "reviewRating"
+    },
+    "cardinality" : "1",
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "76"
+  }, {
+    "range" : "13",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "range" : "13",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "range" : "13",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "79"
+  }, {
+    "range" : "13",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#operatesFlight",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "operatesFlight"
+    },
+    "domain" : "20",
+    "attributes" : [ "object" ],
+    "id" : "81"
+  }, {
+    "range" : "29",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "range" : "29",
+    "domain" : "51",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  }, {
+    "range" : "13",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "84"
+  }, {
+    "range" : "13",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#customerCountry",
+    "baseIri" : "http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "customerCountry"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype" ],
+    "id" : "86"
+  }, {
+    "range" : "51",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "87"
+  }, {
+    "range" : "52",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "range" : "51",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "range" : "51",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "90"
+  }, {
+    "range" : "38",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "91"
+  }, {
+    "range" : "35",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "92"
+  }, {
+    "range" : "33",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "93"
+  }, {
+    "range" : "22",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "50",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "95"
+  }, {
+    "range" : "52",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "96"
+  } ]
+}

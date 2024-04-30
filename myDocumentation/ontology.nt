@@ -1,0 +1,325 @@
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos> <http://www.w3.org/2000/01/rdf-schema#comment> "1. Descripción\n\nEsta ontología modela las respuestas de encuestas de satisfacción de clientes de aerolíneas, enfocándose en Qatar Airways y Ryanair.\n\n2. Propósito y Caso de uso\n\nPropósito: Facilitar el análisis y comparación de la satisfacción del cliente entre diferentes aerolíneas. \nCaso de Uso: Analizar las tendencias de satisfacción en servicios a bordo entre Qatar Airways y Ryanair.\n\n3. Requerimientos\n\n- ¿Cuál es el promedio de satisfacción general para Qatar Airways?\n- ¿Cómo se comparan las tasas de satisfacción del servicio a bordo entre Qatar Airways y Ryanair?\n- ¿Qué factores están más correlacionados con la insatisfacción del cliente en Ryanair?\n- ¿Hay diferencias estacionales en la satisfacción del cliente en ambas aerolíneas?\n\n4, Especificaciones\n\nLos datos provienen de encuestas de satisfacción disponibles en Kaggle para Qatar Airways y Ryanair, presentadas en formato CSV." .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos> <http://www.w3.org/2000/01/rdf-schema#label> "Ontología de Encuestas de Satisfacción de Vuelos" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#fliesFrom
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#fliesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#fliesFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#fliesFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airport> .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasFlown
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasFlown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasFlown> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasFlown> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight> .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasReviewed
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasReviewed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasReviewed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasReviewed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#operatesFlight
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#operatesFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#operatesFlight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airline> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#operatesFlight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#aircraftType
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#aircraftType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#aircraftType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#aircraftType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#customerCountry
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#customerCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#customerCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#customerCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#flightDate
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#flightDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#flightDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#flightDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewDate
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewRating
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#seatType
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#seatType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#seatType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#seatType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Aircraft
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Aircraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Aircraft> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to any kind of airplane used in commercial flights." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airline
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airline> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization providing air transport services for traveling passengers and freight." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airport
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airport> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an airport, which is a location where flights take off and land." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#AverageRating
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#AverageRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#AverageRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#AverageRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a moderate level of satisfaction in customer reviews." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#BusinessTraveller
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#BusinessTraveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#BusinessTraveller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#BusinessTraveller> <http://www.w3.org/2000/01/rdf-schema#comment> "A customer traveling for business purposes." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CabinStaffService
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CabinStaffService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CabinStaffService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CabinStaffService> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the quality of service provided by the airline's cabin staff." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CoupleLeisure
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CoupleLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CoupleLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CoupleLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Leisure travelers flying as a couple." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer> .
+_:genid1 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#hasReviewed> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual who purchases air travel service from airlines." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRating
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an exceptional level of satisfaction in customer reviews." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FamilyLeisure
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FamilyLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FamilyLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FamilyLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Families traveling together for leisure purposes." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight> <http://www.w3.org/2000/01/rdf-schema#comment> "A journey made by an airplane from one airport to another." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FoodBeverages
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FoodBeverages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FoodBeverages> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FoodBeverages> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the quality and variety of food and drinks offered during the flight." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GoodRating
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GoodRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GoodRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GoodRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a good level of satisfaction in customer reviews." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroundService
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroundService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroundService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroundService> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the services provided on the ground, such as check-in and baggage handling." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroupLeisure
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroupLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroupLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroupLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Groups of people traveling together for leisure purposes." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#InflightEntertainment
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#InflightEntertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#InflightEntertainment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#InflightEntertainment> <http://www.w3.org/2000/01/rdf-schema#comment> "Entertainment options available to passengers during the flight." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#PoorRating
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#PoorRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#PoorRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#PoorRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a low level of satisfaction in customer reviews." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#QatarAirways
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#QatarAirways> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#QatarAirways> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Aircraft> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#QatarAirways> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Ryanair> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#QatarAirways> <http://www.w3.org/2000/01/rdf-schema#comment> "The state-owned flag carrier of Qatar, providing international flights." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the ratings given to airlines based on customer reviews." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewRating> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> <http://www.w3.org/2000/01/rdf-schema#comment> "A customer's evaluation or assessment of their flight experience." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Ryanair
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Ryanair> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Aircraft> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Ryanair> <http://www.w3.org/2000/01/rdf-schema#comment> "An Irish low-cost airline headquartered in Dublin, known for its budget travel services." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SeatComfort
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SeatComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SeatComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SeatComfort> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to how comfortable the seating arrangements are on the flight." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect> <http://www.w3.org/2000/01/rdf-schema#comment> "Different aspects of airline service that are rated in reviews, such as seat comfort or food quality." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SoloLeisure
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SoloLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SoloLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SoloLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Individuals traveling alone for leisure purposes." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Verified
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Verified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Verified> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Verified> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a review has been verified as authentic." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#WifiConnectivity
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#WifiConnectivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#WifiConnectivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ServiceAspect> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#WifiConnectivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the availability and quality of WiFi connection aboard the aircraft." .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CustomerJohnDoe
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CustomerJohnDoe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CustomerJohnDoe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Customer> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CustomerJohnDoe> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#customerCountry> "USA" .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CustomerJohnDoe> <http://www.w3.org/2000/01/rdf-schema#comment> "A frequent business traveler who uses various airlines for international travel." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#DohaAirport
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#DohaAirport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#DohaAirport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airport> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#DohaAirport> <http://www.w3.org/2000/01/rdf-schema#comment> "The international airport for Doha, Qatar, serving as the primary hub for Qatar Airways." .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#DohaAirport> <http://www.w3.org/2000/01/rdf-schema#label> "Hamad International Airport" .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRatingFiveStars
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRatingFiveStars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRatingFiveStars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRating> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRatingFiveStars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Rating> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRatingFiveStars> <http://www.w3.org/2000/01/rdf-schema#label> "Excellent Rating" .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FlightQR905
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FlightQR905> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FlightQR905> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Flight> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FlightQR905> <http://www.w3.org/2000/01/rdf-schema#comment> "A daily flight from Doha to London operated by Qatar Airways." .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Qatar_Airways
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Qatar_Airways> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Qatar_Airways> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Airline> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Qatar_Airways> <http://www.w3.org/2000/01/rdf-schema#comment> "A major international airline based in Doha, known for its high service quality" .
+# 
+# http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ReviewJohnDoeQR905
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ReviewJohnDoeQR905> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ReviewJohnDoeQR905> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Review> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ReviewJohnDoeQR905> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewDate> "2024-04-01" .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ReviewJohnDoeQR905> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#reviewRating> "5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ReviewJohnDoeQR905> <http://www.w3.org/2000/01/rdf-schema#comment> "John Doe's review of his flight from Doha to London on Qatar Airways." .
+<http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ReviewJohnDoeQR905> <http://www.w3.org/2000/01/rdf-schema#label> "Review of Flight QR905 by John Doe" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid3 <http://www.w3.org/2002/07/owl#members> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#PoorRating> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GoodRating> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#ExcellentRating> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#AverageRating> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid8 <http://www.w3.org/2002/07/owl#members> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#Verified> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SoloLeisure> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroupLeisure> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FamilyLeisure> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CoupleLeisure> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#BusinessTraveller> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid15 <http://www.w3.org/2002/07/owl#members> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#WifiConnectivity> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#SeatComfort> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#InflightEntertainment> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#GroundService> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#FoodBeverages> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/danib/ontologies/2024/3/encuesta_vuelos#CabinStaffService> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
